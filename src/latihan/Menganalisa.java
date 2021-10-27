@@ -1,5 +1,5 @@
 package latihan;
-/*
+
 import java.math.BigInteger;
 
 public class Menganalisa {
@@ -9,4 +9,3 @@ public class Menganalisa {
         }
     }
 }
-*/
