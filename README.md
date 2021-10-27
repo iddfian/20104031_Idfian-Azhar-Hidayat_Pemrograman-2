@@ -27,7 +27,7 @@ Soal :
 3. A + B - C
 
 Jawaban :
-1. [Jawaban Soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman2/blob/main/src/latihan/Menganalisa.java)
+1. [Jawaban Soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/blob/Modul2/src/latihan/Menganalisa.java)
 ````java
 long p=2147483648;
 ````
@@ -37,7 +37,7 @@ error: integer number too large: 2147483648
 ```
 Syntax error terjadi karena java mambaca syntax tersebut dengan tipe data integer, bukan tipe data long. Jika ingin menggunakan tipe data long seperti syntax diatas maka harus menambahkan huruf (suffix) "L" dibelakang angka agar java dapat membaca tipe data tersebut sebagai tipe data long.
 
-2. [Jawaban Soal 2](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman2/blob/main/src/latihan/AnakAyam.java)
+2. [Jawaban Soal 2](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/blob/Modul2/src/latihan/AnakAyam.java)
 
 Hasil running Anak ayam :
 ```java
@@ -53,7 +53,7 @@ Anak ayam turun 2, Mati satu tinggal 1
 Anak ayam turun 1, Mati 1 tinggal Induknya
 ```
 
-3. [Jawaban Soal 3](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman2/blob/main/src/latihan/ABC.java)
+3. [Jawaban Soal 3](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/blob/Modul2/src/latihan/ABC.java)
 
 Hasil running A + B - C :
 ```java
