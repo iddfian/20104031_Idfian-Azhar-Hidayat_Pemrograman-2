@@ -69,4 +69,4 @@ Saldo sekarang = 4000
 <hr>
 
 ## Kesimpulan
-//Dari prkatikum modul 3 ini mahasiswa mengenal dan memahami pemrograman berorientasi objek bagaimana cara mendeklarasikan suatu class, atribut, dan metode serta mengakses objek dengan mengubah UML class diagram Tabungan ke pemrograman. 
+Dari prkatikum modul 3 ini mahasiswa mengenal dan memahami pemrograman berorientasi objek bagaimana cara mendeklarasikan suatu class, atribut, dan metode serta mengakses objek dengan mengubah UML class diagram Tabungan ke pemrograman. 
