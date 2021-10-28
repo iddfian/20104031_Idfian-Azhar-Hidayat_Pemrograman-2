@@ -23,6 +23,8 @@ Soal :
 Jawaban :
 1. [Jawaban Soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul3/src/latihan)
 
+Pada soal ini diminta mengimplementasikan UML Tabungan (disimpan dan diambil) ke dalam pemrograman. 
+Pertama membuat class Tabuungan yang berisi saldo 
 
 ````java
 public void simpanUang(int jumlah) {
