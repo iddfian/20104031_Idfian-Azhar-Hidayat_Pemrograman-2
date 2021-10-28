@@ -24,15 +24,15 @@ TABUNGAN
 
 
 ````java
-public void disimpan(int uang) {
-        saldo = saldo + uang;
+public void simpanUang(int jumlah) {
+        saldo = saldo + jumlah;
     }
-    public boolean diambil(int uang) {
-        if (saldo - uang < 0){
+    public boolean ambilUang(int jumlah) {
+        if (saldo - jumlah < 0){
             return false;
         }
         else {
-            saldo -= uang;
+            saldo -= jumlah;
             return true;
         }
     }
