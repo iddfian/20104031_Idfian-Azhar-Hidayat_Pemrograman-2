@@ -33,7 +33,7 @@ Saldo awal : 10000
 Jumlah uang yang disimpan : 8000
 Jumlah uang yang diambil : 7000 Ok
 Jumlah uang yang disimpan : 1000
-Jumlah uang yang diambil : 10000 OK
+Jumlah uang yang diambil : 10000 Ok
 Jumlah uang yang diambil : 2500 gagal
 Jumlah uang yang disimpan : 2000
 Saldo sekarang = 4000
