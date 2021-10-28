@@ -1,4 +1,4 @@
-# Modul 3 : Pengenalah Pemrograman Berorientasi Objek
+# Modul 3 : Pengenalan Pemrograman Berorientasi Objek
 
 ## Dasar Teori
 * Pemrograman Berorientasi Objek (PBO/OOP)
