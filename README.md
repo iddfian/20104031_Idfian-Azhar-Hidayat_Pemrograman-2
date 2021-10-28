@@ -23,8 +23,20 @@ Soal :
 Jawaban :
 1. [Jawaban Soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul3/src/latihan)
 
-Pada soal ini diminta mengimplementasikan UML Tabungan (disimpan dan diambil) ke dalam pemrograman. 
-Pertama membuat class Tabuungan yang berisi saldo 
+Pada soal pemrograman kali ini mengimplementasikan UML class diagram Tabungan (disimpan dan diambil) ke dalam pemrograman java. 
+Pertama membuat class Tabuungan yang berisi saldo, pada UML class diagram tanda (+) berarti modifier public. Setelah itu, membuat constrictor saldo dan getter saldo. 
+
+````java
+public class Tabuungan {
+    int saldo;
+    Tabuungan(int saldo) {
+        this.saldo = saldo;
+    }
+    public int getSaldo() {
+        return saldo;
+    }
+````
+Kemudian membuat objek simpanUang dan ambiUang yang berguna untuk menambahkan jumlah saldo dan mengurangi saldo yang ada didalam Tabuungan.
 
 ````java
 public void simpanUang(int jumlah) {
@@ -40,7 +52,9 @@ public void simpanUang(int jumlah) {
         }
     }
 ````
-//Syntax diatas menampilkan error :
+
+Pada program yang dibuat akan menampilkan :
+
 ```java
 Saldo awal : 10000
 Jumlah uang yang disimpan : 8000
@@ -50,12 +64,9 @@ Jumlah uang yang diambil : 10000 ok
 Jumlah uang yang diambil : 2500 gagal
 Jumlah uang yang disimpan : 2000
 Saldo sekarang = 4000
-```
-//Syntax error terjadi karena java mambaca syntax tersebut dengan tipe data integer, bukan tipe data long. Jika ingin menggunakan tipe data long seperti syntax diatas maka harus menambahkan huruf (suffix) "L" dibelakang angka agar java dapat membaca tipe data tersebut sebagai tipe data long.
-
-
+```   
 
 <hr>
 
 ## Kesimpulan
-//Dari prkatikum kali ini mendapatkan pelajaran awal dari java berprientasi objek untuk memajami aturan penamaan identifier, mengetahui tipe-tipe dasar yang ada di Java dan penggunaan variable pada Java.
+//Dari prkatikum modul 3 ini mahasiswa mengenal dan memahami pemrograman berorientasi objek bagaimana cara mendeklarasikan suatu class, atribut, dan metode serta mengakses objek dengan mengubah UML class diagram Tabungan ke pemrograman. 
