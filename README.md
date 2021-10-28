@@ -1,4 +1,4 @@
-# Modul 3 : Dasar Pemrograman Java
+# Modul 3 : Pengenalah Pemrograman berorientasi Objek
 
 ## Dasar Teori
 * Pemrograman Berorientasi Objek (PBO/OOP)
