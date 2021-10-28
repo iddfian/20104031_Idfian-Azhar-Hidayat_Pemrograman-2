@@ -10,7 +10,7 @@ public class TesTabuungan {
         og = Tabungan.ambilUang(7000);
         System.out.print("Jumlah uang yang diambil : 7000");
         if (og) {
-            System.out.println(" Ok");
+            System.out.println(" ok");
         }
         else {
             System.out.println(" gagal");
@@ -20,7 +20,7 @@ public class TesTabuungan {
         og = Tabungan.ambilUang(10000);
         System.out.print("Jumlah uang yang diambil : 10000");
         if (og) {
-            System.out.println(" OK");
+            System.out.println(" ok");
         }
         else {
             System.out.println(" gagal");
@@ -28,7 +28,7 @@ public class TesTabuungan {
         og = Tabungan.ambilUang(2500);
         System.out.print("Jumlah uang yang diambil : 2500");
         if (og){
-            System.out.println(" Ok");
+            System.out.println(" ok");
         }
         else {
             System.out.println(" gagal");
