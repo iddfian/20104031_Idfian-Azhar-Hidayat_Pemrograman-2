@@ -3,7 +3,8 @@
 ## Dasar Teori
 * Pemrograman Berorientasi Objek (PBO/OOP)
 
-  Merupakan suatu metode pemrograman yang orientasinya kepada objek. Tujuan dari PBO adalah untuk mempermudah dalam pengembangan sebuah program, dimana semua data   dan fungsi dibungkus ke dalam class-class atau objek-objek. Ada beberapa karateristik dari PBO diantaranya adalah Abstraksi, Encapculation (pembungkusan),         Inheritance (pewarisan), dan Polymorphism (isi class yang berbeda-beda).
+  Merupakan suatu metode pemrograman yang orientasinya kepada objek. Tujuan dari PBO adalah untuk mempermudah dalam pengembangan sebuah program, dimana semua data   dan fungsi dibungkus ke dalam class-class atau objek-objek. Ada beberapa karateristik dari PBO diantaranya adalah Abstraction (seorang devloper dapat memerintah   fungsi tanpa harus tau kegunaanya), Encapsulation (mengikatkan data menjadi satu atau dikapsulkan), Inheritance (pewarisan kemampuan membentuk class baru yang     mirip dengan fungsi turunan sebelumnya), olymorpism (konsep isi class yang berbeda-beda dapat diakses di interface yang sama).
+
 
 <hr>
 
