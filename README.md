@@ -7,6 +7,8 @@
 
 <hr>
 
+## Praktikum
+
 |**Tabungan**|
 |:-----:|
 |+ saldo: int|
@@ -14,7 +16,6 @@
 |+ getSaldo() : int|
 |+ ambilUang(jumlah : int) : boolean|
 
-## Praktikum
 Soal :
 1. Implementasi UML classs diagram dalam pemrograman, untuk membuat class Tabungan. 
 
