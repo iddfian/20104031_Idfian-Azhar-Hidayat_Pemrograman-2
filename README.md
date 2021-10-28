@@ -14,6 +14,7 @@
 |+ saldo: int|
 |+ tabungan(initsaldo : int)|
 |+ getSaldo() : int|
+|+ simpanUang(jumlah : int)|
 |+ ambilUang(jumlah : int) : boolean|
 
 Soal :
