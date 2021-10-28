@@ -3,16 +3,26 @@
 ## Dasar Teori
 * Pemrograman Berorientasi Objek (PBO/OOP)
 
-  Merupakan suatu metode pemrograman yang orientasinya kepada objek. Tujuan dari PBO adalah untuk mempermudah dalam pengembangan sebuah program, dimana semua data   dan fungsi dibungkus ke dalam class-class atau objek-objek. Ada beberapa karateristik dari BPO diantaranya adalah Abstraksi, Encapculation (pembungkusan),         Inheritance (pewarisan), dan Polymorphism (isi class yang berbeda-beda) 
+  Merupakan suatu metode pemrograman yang orientasinya kepada objek. Tujuan dari PBO adalah untuk mempermudah dalam pengembangan sebuah program, dimana semua data   dan fungsi dibungkus ke dalam class-class atau objek-objek. Ada beberapa karateristik dari BPO diantaranya adalah Abstraksi, Encapculation (pembungkusan),         Inheritance (pewarisan), dan Polymorphism (isi class yang berbeda-beda).
 
 <hr>
 
 ## Praktikum
 Soal :
-1. Tabungan
+1. Implementasi UML classs diagram dalam pemrograman, untuk membuat class Tabungan. 
 
 Jawaban :
 1. [Jawaban Soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul3/src/latihan)
+
+TABUNGAN
++Saldo: int
++Tabungan(initsaldo: int)
++getSaldo(): int
++simpangUang(jumlah: int)
++ambilUang(jumlah: int): boolean
+
+
+
 ````java
 public void disimpan(int uang) {
         saldo = saldo + uang;
