@@ -14,14 +14,6 @@ Soal :
 Jawaban :
 1. [Jawaban Soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul3/src/latihan)
 
-TABUNGAN
-+Saldo: int
-+Tabungan(initsaldo: int)
-+getSaldo(): int
-+simpangUang(jumlah: int)
-+ambilUang(jumlah: int): boolean
-
-
 
 ````java
 public void simpanUang(int jumlah) {
