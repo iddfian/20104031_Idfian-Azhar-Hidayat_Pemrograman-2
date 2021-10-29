@@ -14,7 +14,7 @@ public class StudentRecord {
         return name;
     }
 
-    public void setName( String temp ) {
+    public void setName(String temp) {
         name = temp;
     }
 
