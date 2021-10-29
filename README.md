@@ -42,4 +42,4 @@ Hitung = 0
 <hr>
 
 ## Kesimpulan
-Dari praktikum modul 4 ini mahasiswa memahami dasar pemrograman berorientasi objek bagaimana menerapkan konsep enkasulapsi pada class dan mendeklarasikan suatu constructor yang sudah di contohkan pada percobaan satu dan dua serta latihan menganalisa program java student record.
+Dari praktikum modul 4 ini mahasiswa dapat memahami dasar pemrograman berorientasi objek bagaimana menerapkan konsep enkasulapsi pada class dan mendeklarasikan suatu constructor yang sudah di contohkan pada percobaan satu dan dua serta latihan menganalisa program java student record.
