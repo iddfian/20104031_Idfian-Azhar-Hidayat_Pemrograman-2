@@ -1,7 +1,7 @@
 package latihan;
 
 public class StudentRedordExample {
-    public static void main( String[] args ) {
+    public static void main(String[] args) {
 
         StudentRecord Wahyu = new StudentRecord();
         StudentRecord Ini = new StudentRecord();
@@ -10,7 +10,7 @@ public class StudentRedordExample {
         Wahyu.setName("Wahyu");
         Ini.setName("Ini");
         Nama.setName("Nama");
-        System.out.println( Wahyu.getName());
+        System.out.println(Wahyu.getName());
         System.out.println("Hitung = " + StudentRecord.getStudentCount());
     }
 }
