@@ -11,11 +11,11 @@
 
 * Constructor
   
-  Construcktor adalah method yang berfungsi untuk menginisiasi variable-variable instans yang akan dimilliki oleh objek. Beberapa karateristiknya ialah memiliki     nama yang sama dengan class, tidak mengembalikan suatu nilai, dapat dipanggil oleh constructor lain didalam satu class, dan dapat ditambah acses modifier         puclic, private, protectd, dan default. 
+  Constructor adalah method yang berfungsi untuk menginisiasi variable-variable instans yang akan dimilliki oleh objek. Beberapa karateristiknya ialah memiliki     nama yang sama dengan class, tidak mengembalikan suatu nilai, dapat dipanggil oleh constructor lain didalam satu class, dan dapat ditambah acses modifier         puclic, private, protectd, dan default. 
 
 * Overloading Constructor
    
-  Overloading constructor adalah suatu class yang mempunyai lebih dari satu constructor dalam satu Class, dengan syarat tidak boleh ada yang sama setiap             construktor memiliki parameter yang berbeda, bisa berbeda jumlah parameternya ataupun berbeda type data parameternya.
+  Overloading constructor adalah suatu class yang mempunyai lebih dari satu constructor dalam satu Class, dengan syarat tidak boleh ada yang sama setiap             constructor memiliki parameter yang berbeda, bisa berbeda jumlah parameternya ataupun berbeda type data parameternya.
 
 
 <hr>
@@ -53,7 +53,7 @@ public String getName() {
         name = temp;
     }
  ````
-Kemudian digunakan (public doubel) dengan result atau hasilnya (0) untuk menampung nilai (mathGrade, englishGrade, scienceGrade)
+Kemudian digunakan (public doubel) sebagai constructor dengan parameter result atau hasilnya sebagai default (0) untuk menampung nilai (mathGrade, englishGrade, scienceGrade)
 (getStudentCount) yang nanti dipanggil oleh StudentRedordExample digunakan untuk menetukan hasil dari output programnya.
  
  ````java   
@@ -68,9 +68,9 @@ Kemudian digunakan (public doubel) dengan result atau hasilnya (0) untuk menampu
 }
 ````
 
-Class StudentRedordExample disi dengan nilai atau data yang digunakan sebagai output programnya, berisi (wahyu, isi, dan nama) dengan setter (setName) untuk mengambil nilai dari (wahyu, isi, dan nama).
-Dan (systemoutprint) nanti akan  menampilkan output (Wahyu) karena hanya (Wahyu) yang mengguakan getter untuk mengambil nilai nama. Dan (Systemoutprintln-Hitung) menampilkan hasil (0) karena result atau hasilnya (0) dan pada (mathGrade, englishGrade, scienceGrade) nggak diisi nilai inputan.
-yang menghasilkan (result) hanya menampilkan (0) sebagai angka defaultnya.
+Class StudentRedordExample disi dengan nilai atau data yang digunakan sebagai output programnya, berisi (wahyu, isi, dan nama) sebagai overloading constructor dengan setter (setName) untuk mengambil nilai dari (wahyu, isi, dan nama).
+Dan (systemoutprint) nanti akan menampilkan output (Wahyu) karena hanya (Wahyu) yang mengguakan getter untuk mengambil nilai nama. 
+Dan (Systemoutprintln-Hitung) sebagai constructor menampilkan hasil (0) karena resultnya (0), dan pada (mathGrade, englishGrade, scienceGrade) nggak diisi nilai inputan, yang menghasilkan (result) hanya menampilkan hasil (0) sebagai angka defaultnya.
 
 ````java
 Wahyu.setName("Wahyu");
