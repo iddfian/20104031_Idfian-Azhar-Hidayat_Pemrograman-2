@@ -1,35 +1,84 @@
 # Modul 4 : Dasar Pemrograman Berorientasi Objek
 
 ## Dasar Teori
-* //-belum-//Pemrograman Berorientasi Objek (PBO/OOP)
+* Informasi Hiding
 
-//-belum-//Merupakan suatu metode pemrograman yang orientasinya kepada objek. Tujuan dari PBO adalah untuk mempermudah dalam pengembangan sebuah program, dimana semua data   dan fungsi dibungkus ke dalam class-class atau objek-objek. Ada beberapa karateristik dari PBO diantaranya adalah Abstraction (seorang devloper dapat memerintah   fungsi tanpa harus tau kegunaanya), Encapsulation (mengikatkan data menjadi satu atau dikapsulkan), Inheritance (pewarisan kemampuan membentuk class baru yang     mirip dengan fungsi turunan sebelumnya), olymorpism (konsep isi class yang berbeda-beda dapat diakses di interface yang sama).
+  Information hiding adalah menyembunyikan atribut maupun method suatu objek dari objek lain. Informasi suatu class disembunyikan atau dilindungi agar para         anggota tidak dapat mengaksesnya dari luar, dengan memberikan hak akses private ketika mendeklarasikan atribut ataupun method.
+
+* Encapsulation
+
+  Encapsulation adalah menyembunyikan implementasi detail dari suatu objek dari objek lain. Encapsilation memiliki dua hal mendasar yaitu information hiding dan     menyediakan method untuk pengaksesan data.
+
+* Constructor
+  
+  Construcktor adalah method yang berfungsi untuk menginisiasi variable-variable instans yang akan dimilliki oleh objek. Beberapa karateristiknya ialah memiliki     nama yang sama dengan class, tidak mengembalikan suatu nilai, dapat dipanggil oleh constructor lain didalam satu class, dan dapat ditambah acses modifier         puclic, private, protectd, dan default. 
+
+* Overloading Constructor
+   
+  Overloading constructor adalah suatu class yang mempunyai lebih dari satu constructor dalam satu Class, dengan syarat tidak boleh ada yang sama setiap             construktor memiliki parameter yang berbeda, bisa berbeda jumlah parameternya ataupun berbeda type data parameternya.
 
 
 <hr>
 
+
 ## Praktikum
 
 Soal :
-1. Analisislah dan temukan konsep apa saja yang digunakan pada modul Student Record beserta analisis mengapa hasil program seperti itu ! 
+1. Analisa modul Student Record dan hasil programnya ! 
 
 Jawaban :
 1. [Jawaban Soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul4/src/latihan)
 
-//-belum-//Pada soal pemrograman kali ini mengimplementasikan UML class diagram Tabungan (disimpan dan diambil) ke dalam pemrograman java. 
-Pertama membuat class Tabuungan yang berisi saldo, pada UML class diagram tanda (+) berarti modifier public. Setelah itu, membuat constrictor saldo dan getter saldo. 
-
+Pertama Membuat class dengan nama StudentRecord dan StudentRedordExample, StudentRecord sebagai class yang dipanggil oleh StudentRedordExample.
+Kemudian didalam classnya menggunakan atribute dan method yang digunakan untuk menyembunyikan dengan cara membuat modifier private.
 ````java
-
-//-belum-//
-
+public class StudentRecord {
+    private String name;
+    private String address;
+    private int age;
+    private double mathGrade;
+    private double englishGrade;
+    private double scienceGrade;
+    private double average;
+    private static int studentCount;
 ````
-//---//Kemudian membuat objek simpanUang dan ambiUang yang berguna untuk menambahkan jumlah saldo dan mengurangi saldo yang ada didalam Tabuungan.
+Didalam class StudentRecord menggunakan encapsulasi dengan attribut getter untuk mengambil nilai nama (getName return name), dan menggunakan setter (setName) untuk memberikan nilai nama dan disimpan sementara di (string temp).
 
 ````java
+public String getName() {
+        return name;
+    }
 
-//-belum-//
+    public void setName(String temp) {
+        name = temp;
+    }
+ ````
+Kemudian digunakan (public doubel) dengan result atau hasilnya (0) untuk menampung nilai (mathGrade, englishGrade, scienceGrade)
+(getStudentCount) yang nanti dipanggil oleh StudentRedordExample digunakan untuk menetukan hasil dari output programnya.
+ 
+ ````java   
+    public double getAverage() {
+        double result = 0;
+        result = (mathGrade + englishGrade + scienceGrade) / 3; return result;
+    }
 
+    public static int getStudentCount() {
+        return studentCount;
+    }
+}
+````
+
+Class StudentRedordExample disi dengan nilai atau data yang digunakan sebagai output programnya, berisi (wahyu, isi, dan nama) dengan setter (setName) untuk mengambil nilai dari (wahyu, isi, dan nama).
+Dan (systemoutprint) nanti akan  menampilkan output (Wahyu) karena hanya (Wahyu) yang mengguakan getter untuk mengambil nilai nama. Dan (Systemoutprintln-Hitung) menampilkan hasil (0) karena result atau hasilnya (0) dan pada (mathGrade, englishGrade, scienceGrade) nggak diisi nilai inputan.
+yang menghasilkan (result) hanya menampilkan (0) sebagai angka defaultnya.
+
+````java
+Wahyu.setName("Wahyu");
+Ini.setName("Ini");
+Nama.setName("Nama");
+System.out.println(Wahyu.getName());
+        System.out.println("Hitung = " + StudentRecord.getStudentCount());
+    }
 ````
 
 Hasil running program menampilkan :
