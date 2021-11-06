@@ -27,7 +27,7 @@ Soal :
 1. Analisa modul Student Record dan hasil programnya ! 
 
 Jawaban :
-1. [Jawaban Soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul4/src/latihan)
+1. [Jawaban Soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul5/src/latihan)
 
 Pertama Membuat class dengan nama StudentRecord dan StudentRedordExample, StudentRecord sebagai class yang dipanggil oleh StudentRedordExample.
 Kemudian didalam classnya menggunakan atribute dan method yang digunakan untuk menyembunyikan dengan cara membuat modifier private.
