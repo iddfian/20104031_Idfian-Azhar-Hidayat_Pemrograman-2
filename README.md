@@ -1,94 +1,103 @@
-# Modul 4 : Dasar Pemrograman Berorientasi Objek
+# Modul 5 : Mengelola Class
 
 ## Dasar Teori
-* Informasi Hiding
+* Package
 
-  Information hiding adalah menyembunyikan atribut maupun method suatu objek dari objek lain. Informasi suatu class disembunyikan atau dilindungi agar para         anggota tidak dapat mengaksesnya dari luar, dengan memberikan hak akses private ketika mendeklarasikan atribut ataupun method.
+  Package merupakan suatu cara untuk mengelompokan class-class banyak yang berisi sekumpulan perogram yang dikelompokan menjadi satu dalam kategori tertentu.       Package sangat bermanfaat saat kita membuat program besar yang banyak memiliki class-class, dengan package kita dapat mengelompokanya agar mudah dalam             suatu pengerjaan program. Package juga mempengaruhi hak akses ke class-class di dalamnya dengan nama class utama harus sama dengan nama packagenya.  
 
-* Encapsulation
+* Import Class
 
-  Encapsulation adalah menyembunyikan implementasi detail dari suatu objek dari objek lain. Encapsilation memiliki dua hal mendasar yaitu information hiding dan     menyediakan method untuk pengaksesan data.
+  Perintah import digunakan untuk memberitahukan program kepada class-class yang terdapat dalam package tertentu yang akan di import. Import dapat dilakukan hanya   dengan sebagian class atau sub class atau semuanya.
 
-* Constructor
+* Kata Kunci (*this*)
   
-  Constructor adalah method yang berfungsi untuk menginisiasi variable-variable instans yang akan dimilliki oleh objek. Beberapa karateristiknya ialah memiliki     nama yang sama dengan class, tidak mengembalikan suatu nilai, dapat dipanggil oleh constructor lain didalam satu class, dan dapat ditambah acses modifier         puclic, private, protectd, dan default. 
+  Kata kunci (*this*) ini digunakan dalam sebuah kelas untuk menyatakan object sekarang. Kata kunci (*this*) sangat berguna untuk menunjukkan suatu member di       dalam class-nya sendiri. (*this*) dapat digunakan baik untuk data member maupun untuk function member, serta dapat juga digunakan untuk constructor.  
+  
 
-* Overloading Constructor
-   
-  Overloading constructor adalah suatu class yang mempunyai lebih dari satu constructor dalam satu Class, dengan syarat tidak boleh ada yang sama setiap             constructor memiliki parameter yang berbeda, bisa berbeda jumlah parameternya ataupun berbeda type data parameternya.
-
+|**this.data_member**|merujuk pada data member|
+|:-----:|:-----:|
+|**this.function_member()**|merujuk pada function member|
+|**this()**|merujuk pada construktor|
 
 <hr>
 
-
 ## Praktikum
 
+Perbankan | :arrow_heading_down: |
+:------------ |:--------|
+
+|**Nasabah**|                                                                     **has** | **Tabungan**|
+|-----|                                                                                  ----|----| 
+|- namaAwal : String|                                                                      |- saldo : int |  
+|- namaAkhir : String|                                                                     |**-----------------------------------------------** 
+|- tabungan : Tabungan |                                                                   |+ Tabungan(saldo : int) |  
+|**--------------------------------------------------------------------**|                 |+ getSaldo() : int |
+|+ Nasabah (namaAwal : String,  namaAkhir : String) |                                      |+ ambilUang(jumlah : int) : boolean |
+|+ getNamaAwal() : String |                                                                |+ simpanUang(jumlah : int) |
+|+ getNamaAkhir () : String|
+|+ getTabungan() : Tabungan|                                                
+|+ setTabungan (tabungan : tabungan)|                                       
+
+
 Soal :
-1. Analisa modul Student Record dan hasil programnya ! 
+1. Mengimplementasi UML Class Diagram Perbankan ke dalam program ! 
 
 Jawaban :
 1. [Jawaban Soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul5/src/latihan)
 
-Pertama Membuat class dengan nama StudentRecord dan StudentRedordExample, StudentRecord sebagai class yang dipanggil oleh StudentRedordExample.
-Kemudian didalam classnya menggunakan atribute dan method yang digunakan untuk menyembunyikan dengan cara membuat modifier private.
-````java
-public class StudentRecord {
-    private String name;
-    private String address;
-    private int age;
-    private double mathGrade;
-    private double englishGrade;
-    private double scienceGrade;
-    private double average;
-    private static int studentCount;
-````
-Didalam class StudentRecord menggunakan encapsulasi dengan attribut getter untuk mengambil nilai nama (getName return name), dan menggunakan setter (setName) untuk memberikan nilai nama dan disimpan sementara di (string temp).
+Pada soal praktikum kali ini mengimplementasikan UML Class Diagram Perbankan ke dalam pemrograman. Pertama membuat package perbankan yang didalamnya berisis dua class, class Nasabah dan Tabungan. Di class Nasabah digunakan sebagai penampung nama nasabah, yang menggunakan modifier private agar informasi nama nasabah dapat disembunyikan atau dilindungi, kemudian pada class Nasabah digunkan kata kunci *this* untuk menyatakan object namaAwal dan namaAkhir yang sedang digunakan sekarang.
 
 ````java
-public String getName() {
-        return name;
+public class Nasabah {
+    private String namaAwal;
+    private String namaAkhir;
+    private latihan.Perbankan.Tabungan tabungan;
+
+    public Nasabah(String namaAwal, String namaAkhir) {
+        this.namaAwal = namaAwal;
+        this.namaAkhir = namaAkhir;
     }
+````
+Kemudian di class kedua ini diberi nama Tabungan yang berisi nilai saldo nasabah yang menabung disini. Menggunakan modifier private dengan int (untuk menampung angka) dan saldo nilai uang yang dimiliki nasabah pada tabungan.
 
-    public void setName(String temp) {
-        name = temp;
+````java
+public class Tabungan {
+    private int saldo;
+
+    public Tabungan(int saldo) {
+        this.saldo = saldo;
     }
  ````
-Kemudian digunakan (public doubel) sebagai constructor dengan parameter result atau hasilnya sebagai default (0) untuk menampung nilai (mathGrade, englishGrade, scienceGrade)
-(getStudentCount) yang nanti dipanggil oleh StudentRedordExample digunakan untuk menetukan hasil dari output programnya.
+Membuat class main method TesLatihan, disini digunakan perintah import untuk memberitahukan program kepada class Nasabah dan class Tabungan yang terdapat dalam package Perbankan yang sudah import. new nasabah bernama Agus Daryanto yang menabung dengan saldo awal sebesar limaribu.
  
  ````java   
-    public double getAverage() {
-        double result = 0;
-        result = (mathGrade + englishGrade + scienceGrade) / 3; return result;
-    }
-
-    public static int getStudentCount() {
-        return studentCount;
-    }
-}
-````
-
-Class StudentRedordExample disi dengan nilai atau data yang digunakan sebagai output programnya, berisi (wahyu, isi, dan nama) sebagai overloading constructor dengan setter (setName) untuk mengambil nilai dari (wahyu, isi, dan nama).
-Dan (systemoutprint) nanti akan menampilkan output (Wahyu) karena hanya (Wahyu) yang mengguakan getter untuk mengambil nilai nama. 
-Dan (Systemoutprintln-Hitung) sebagai constructor menampilkan hasil (0) karena resultnya (0), dan pada (mathGrade, englishGrade, scienceGrade) nggak diisi nilai inputan, yang menghasilkan (result) hanya menampilkan hasil (0) sebagai angka defaultnya.
-
-````java
-Wahyu.setName("Wahyu");
-Ini.setName("Ini");
-Nama.setName("Nama");
-System.out.println(Wahyu.getName());
-        System.out.println("Hitung = " + StudentRecord.getStudentCount());
-    }
+import latihan.Perbankan.Nasabah;
+import latihan.Perbankan.Tabungan;
+public class TesLatihan {
+    public static void main(String[] args) {
+        int tmp;
+        boolean status;
+        Nasabah nasabah = new Nasabah("Agus","Daryanto");
+        System.out.println("Nasabah atas nama : " + nasabah.getNamaAwal() + " " + nasabah.getNamaAkhir());
+        nasabah.setTabungan(new Tabungan(5000));
+        tmp = nasabah.getTabungan().getSaldo();
 ````
 
 Hasil running program menampilkan :
 
 ```java
-Wahyu
-Hitung = 0
+Nasabah atas nama : Agus Daryanto
+Saldo awal : 5000
+Jumlah uang yang disimpan : 3000
+Jumlah uang yang diambil : 6000 Ok
+Jumlah uang yang disimpan : 3500
+Jumlah uang yang diambil : 4000 Ok
+Jumlah uang yang diambil : 1600 gagal
+Jumlah uang yang disimpan : 2000
+Saldo sekarang = 3500
 ```   
 
 <hr>
 
 ## Kesimpulan
-Dari praktikum modul 4 ini mahasiswa dapat memahami dasar pemrograman berorientasi objek bagaimana menerapkan konsep enkasulapsi pada class dan mendeklarasikan suatu constructor yang sudah di contohkan pada percobaan satu dan dua serta latihan menganalisa program java student record.
+Dari praktikum modul 5 ini mahasiswa dapat memahami mengenai konsep package dan import serta menggunakan kata kunci *this* yang sebelumnya di contohkan pada percobaan satu dan dua, mengimplementasikan UML Class Diagram sekolah ke dalam program. Membuat package sekolah yang berisi class kelas, dan membuat class mahasiswa yang digunakan sebagai inportnya. Kemudian mengerjakan tugas latihan mengimplementasikan UML Class Diagram Perbankan ke dalam program, yang harus menghasilkan output seperti yang ditentukan.
