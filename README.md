@@ -121,7 +121,7 @@ public class Child extends Parent{
     int x;
 
     public Child(){
-/*      x = 5;  */ //Jika "x = 5;" dilekakan diatas "super();" maka yang terjadi akan muncul "error". 
+//      x = 5;  - Jika "x = 5;" dilekakan diatas "super();" maka yang terjadi akan muncul "error". 
         super();
         x = 5;
     }
