@@ -101,6 +101,7 @@ public class A {
    class A {
    A();
 }
+
 class B extends A {
    B();
 }
@@ -113,6 +114,7 @@ B b = new B();
 
 Adapun alasan tidak untuk mewarisikan konstruktor, karena konstruktor class A berarti membuat objek tipe A, dan konstruktor class B berarti membuat objek kelas B.
 Dalam java pemanggilan konstruktor dilakukan dengan `key super`, dan harus diletakan setelah method "public Child()" atau "error" jika diletakan dibawah "x = 5;".
+Ini yang harus kita perhatikan bahwa untuk  pemanggilan konstruktor parent class, kita harus melakukan  pemanggilan tersebut di baris pertama pada konstruktor subclass.
 
 Contohnya :
 
@@ -135,7 +137,7 @@ public class Child extends Parent{
 
 
 Soal :
-1. Mengimplementasi UML Class Diagram Perbankan ke dalam program ! 
+1. Menganalisis Percobaan Modul 6 ! 
 
 Jawaban :
 1. [Jawaban Soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul5/src/latihan)
