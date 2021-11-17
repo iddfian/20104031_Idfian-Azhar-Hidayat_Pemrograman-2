@@ -89,9 +89,9 @@ public class A {
 
    Kata kunci `super` dipakai untuk merujuk pada `member` dari `parent class`,  sebagaimana kata kunci `this` yang dipakai untuk merujuk pada `member dari class`    itu sendiri. 
    Ada beberapa hal yang harus diingat ketika menggunakan pemanggil constuktor super : 
-   1. Pemanggil super() HARUS DIJADIKAN PERNYATAAN PERTAMA DALAM constructor. 
-   2. Pemanggil super() hanya dapat digunakan dalam definisi constructor. 
-   3. Termasuk constructor this() dan pemanggil super() TIDAK BOLEH  TERJADI DALAM constructor YANG SAMA.
+   - Pemanggil super() HARUS DIJADIKAN PERNYATAAN PERTAMA DALAM constructor. 
+   - Pemanggil super() hanya dapat digunakan dalam definisi constructor. 
+   - Termasuk constructor this() dan pemanggil super() TIDAK BOLEH  TERJADI DALAM constructor YANG SAMA.
 
 * Konstruktor tidak diwariskan 
 
