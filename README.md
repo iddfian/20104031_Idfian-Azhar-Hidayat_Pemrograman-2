@@ -95,7 +95,7 @@ public class A {
 
 * Konstruktor tidak diwariskan 
 
-   konstruktor tidak dapat diwarisikan karena dalam `subclass "anak/turunan"` memiliki nama yang `berbeda` (nama subclass).
+   constructor tidak dapat diwarisikan karena dalam `subclass "anak/turunan"` memiliki nama yang `berbeda` (nama subclass).
    
 ````java   
    class A {
@@ -112,9 +112,9 @@ Dapat melakukan seperti ini :
 B b = new B();
 ````
 
-Adapun alasan tidak untuk mewarisikan konstruktor, karena konstruktor class A berarti membuat objek tipe A, dan konstruktor class B berarti membuat objek kelas B.
-Dalam java pemanggilan konstruktor dilakukan dengan `key super`, dan harus diletakan setelah method "public Child()" atau "error" jika diletakan dibawah "x = 5;".
-Ini yang harus kita perhatikan bahwa untuk  pemanggilan konstruktor parent class, kita harus melakukan  pemanggilan tersebut di baris pertama pada konstruktor subclass.
+Adapun alasan tidak untuk mewarisikan constructor, karena constructor class A berarti membuat objek tipe A, dan constructor class B berarti membuat objek kelas B.
+Dalam java pemanggilan constructor dilakukan dengan `key super`, dan harus diletakan setelah method "public Child()" atau "error" jika diletakan dibawah "x = 5;".
+Ini yang harus kita perhatikan bahwa untuk pemanggilan constructor parent class, kita harus melakukan pemanggilan tersebut di baris pertama pada constructor subclass.
 
 Contohnya :
 
@@ -125,7 +125,7 @@ public class Child extends Parent{
     public Child(){
 //      x = 5;  - Jika dilekakan diatas "super();" maka yang terjadi akan muncul "error". 
         super();
-        x = 5;
+        x = 5; //Penempatan yang benar
     }
 }
 ````
@@ -143,60 +143,143 @@ Jawaban :
 1. [Jawaban Soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul6/src/percobaan)
 
   - Membuat kata kunci *super*
-
-````java
-public class Nasabah {
-    private String namaAwal;
-    private String namaAkhir;
-    private latihan.Perbankan.Tabungan tabungan;
-
-    public Nasabah(String namaAwal, String namaAkhir) {
-        this.namaAwal = namaAwal;
-        this.namaAkhir = namaAkhir;
-    }
-````
-Kemudian di class kedua ini diberi nama Tabungan yang berisi nilai saldo nasabah yang menabung disini. Menggunakan modifier private dengan int (untuk menampung angka) dan saldo nilai uang yang dimiliki nasabah pada tabungan.
-
-````java
-public class Tabungan {
-    private int saldo;
-
-    public Tabungan(int saldo) {
-        this.saldo = saldo;
-    }
- ````
-Membuat class main method TesLatihan, disini digunakan perintah import untuk memberitahukan program kepada class Nasabah dan class Tabungan yang terdapat dalam package Perbankan yang sudah import. new nasabah bernama Agus Daryanto yang menabung dengan saldo awal sebesar limaribu.
  
- ````java   
-import latihan.Perbankan.Nasabah;
-import latihan.Perbankan.Tabungan;
-public class TesLatihan {
-    public static void main(String[] args) {
-        int tmp;
-        boolean status;
-        Nasabah nasabah = new Nasabah("Agus","Daryanto");
-        System.out.println("Nasabah atas nama : " + nasabah.getNamaAwal() + " " + nasabah.getNamaAkhir());
-        nasabah.setTabungan(new Tabungan(5000));
-        tmp = nasabah.getTabungan().getSaldo();
+    Super akan menampilkan objek dari parent class "induk". kata kunci super untuk mengambil nilai dari variabel yang ada di dalam parent class "induk".
+
+````java
+public class PersegiTest {
+    public static void main(String[] args){
+        Persegi kotak = new Persegi();
+
+        kotak.setSuperP(5);
+        kotak.setSuperL(10);
+
+        kotak.setP(3);
+        kotak.setL(13);
+
+        kotak.getLuas();
+    }
+}
+````
+Hasil running program :
+````java
+Luas Super : 50 
+Luas : 39
 ````
 
-Hasil running program menampilkan :
+  - Mendefinisikan Superclass dan Subclass 
+  
+  Superclass adalah class induk-nya tempat subclass "anak" mewarisi fitur dari superclass.
+  
+  ````java
+  public class Person {
+    protected String name;
+    protected String address;
 
-```java
-Nasabah atas nama : Agus Daryanto
-Saldo awal : 5000
-Jumlah uang yang disimpan : 3000
-Jumlah uang yang diambil : 6000 Ok
-Jumlah uang yang disimpan : 3500
-Jumlah uang yang diambil : 4000 Ok
-Jumlah uang yang diambil : 1600 gagal
-Jumlah uang yang disimpan : 2000
-Saldo sekarang = 3500
-```   
+    public Person(){
+        System.out.println("Inside Person : Constructor");
+        name = "";
+        address = "";
+    }
 
+    public Person(String name,String address){
+        this.name = name;
+        this.address = address;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+}
+````
+Hasil running program :
+````java
+Inside Person : Construktor 
+Inside Student : Constructor
+````
+
+  - Kontrol pengaksesan 
+  
+   Di dalam java, kontrol pengaksesan dapat digambarkan dalam tabel :
+   
+|**Modifier**|**Class yang sama**|**Package yang sama**|**Subclass**|**Class manapun**|
+|:-----|:-----:|:-----:|:-----:|:-----:|
+|private|:heavy_check_mark:||||
+|default|:heavy_check_mark:|:heavy_check_mark:|||
+|protected|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:||
+|public|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+   
+ ````java
+ public class B extends A{
+    private int z;
+
+    public void setz(int z) {
+        this.z = z;
+    }
+
+    public void getJumlah(){
+        System.out.println("Jumlah : " + (x+y+z));
+    }
+}
+````
+Mengapa timbul pesan kesalahan ? karena menggunkan modifier `private` yang dimana tidak bisa diakses oleh class lain, maka diubah menjadi `protected` yang member dan class hanya bisa diakses dari class itu sendiri,subclass "anak", dan package (class yang berada sama pada satu package).
+
+````java
+public class A {
+    /*private*/protected int x;
+    /*private*/protected int y;
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void sety(int y) {
+        this.y = y;
+    }
+
+    public void getNilai(){
+        System.out.println("Nilai x : " + x + "nilai y : " + y);
+    }
+}
+````
+   
+   - Konstruktor tidak diwariskan 
+   
+   Class `kosong` Parent :
+   
+````java
+   public class Parent {
+}
+````
+
+Class Child :
+
+````java
+public class Child extends Parent{
+    int x;
+
+    public Child(){
+//      x = 5;  - Jika dilekakan diatas "super();" maka yang terjadi akan muncul "error". 
+        super();
+        x = 5; //Penempatan yang benar
+    }
+}
+````
+   Pada Program terjadi `error` karena pemanggilan constructor `key super`, dan harus diletakan setelah method "public Child()" atau "error" jika diletakan dibawah "x = 5;". kita harus melakukan pemanggilan tersebut di baris pertama pada constructor subclass.
 
 <hr>
 
 ## Kesimpulan
-Dari praktikum modul 5 ini mahasiswa dapat memahami mengenai konsep package dan import serta menggunakan kata kunci *this* yang sebelumnya di contohkan pada percobaan satu dan dua, mengimplementasikan UML Class Diagram sekolah ke dalam program. Membuat package sekolah yang berisi class kelas, dan membuat class mahasiswa yang digunakan sebagai inportnya. Kemudian mengerjakan tugas latihan mengimplementasikan UML Class Diagram Perbankan ke dalam program, yang harus menghasilkan output seperti yang ditentukan.
-
+Dari praktikum modul 6 ini mahasiswa dapat memahami mengenai konsep inheritance dalam pemrograman JAVA dengan Inheritance kita dapat meminimalisir penulisan berulang dari property dan method dengan mewarisi fitur yang dimiliki oleh superclass atau "induk"-nya.` Melakukan pengontrolan akses pada pengkodean, Memahami pengaksesan member pada parent class : Pengaksesan member dari parent hanya bisa diakses dari class itu sendiri, subclass anak/turunan, dan package class yang berada satu package, kata kunci super : dipakai untuk merujuk pada member dari parent class, sebagaimana kata kunci this yang dipakai untuk merujuk pada member dari class itu sendiri, dan Menghindari kesalahan pada pewarisan konstruktor : Pada Program terjadi `error` karena pemanggilan constructor `key super`, dan harus diletakan setelah method "public Child()" atau "error" jika diletakan dibawah "x = 5;". kita harus melakukan pemanggilan tersebut di baris pertama pada constructor subclass.
