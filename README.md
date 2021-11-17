@@ -5,7 +5,7 @@
 
   Interitance `pewarisan atau penurunan` merupakan konsep *OOP "Object-oriented programming"* `dimana sebuah class dapat menurunkan atau mewarisi property dan     methods dari perilaku induknya, dari satu class ke class lainnya`. Suatu class yang mempunyai class `turunan` dinamakan `parent class` atau `superclass           "induk"`, dan class `turunannya` dinamakan `child class` atau `subclass "anak"`. 
   
-  Suatu subclass "anak" mewarisi fitur yang dimiliki oleh superclass "induk"-nya. Pada subclass "anak", dia dapat menambahkan property dan methodnya `sendiri`     selain dari superclass "induk"-nya. `Kesimpulannya, dapat dikatakan bahwa suatu subclass "anak" tidak lain hanya memperluas superclass "induk" dengan           menurunkan atau mewarisi property dan methods dari perilaku atau fitur yang dimiliki induknya.` 
+  Suatu subclass "anak" mewarisi fitur yang dimiliki oleh superclass "induk"-nya. Pada subclass "anak", dia dapat menambahkan property dan methodnya `sendiri`     selain dari superclass "induk"-nya. `Kesimpulannya, dengan Inheritance kita dapat meminimalisir penulisan berulang dari property dan method dengan mewarisi fitur yang dimiliki oleh superclass atau "induk"-nya.` Dapat dikatakan bahwa suatu subclass "anak" tidak lain hanya memperluas superclass "induk" dengan menurunkan atau mewarisi property dan methods dari perilaku yang dimiliki induknya.
 
 * Deklarasi Inheritance dan Single Inheritance 
 
@@ -140,9 +140,9 @@ Soal :
 1. Menganalisis Percobaan Modul 6 ! 
 
 Jawaban :
-1. [Jawaban Soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul5/src/latihan)
+1. [Jawaban Soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul6/src/percobaan)
 
-Pada soal praktikum kali ini mengimplementasikan UML Class Diagram Perbankan ke dalam pemrograman. Pertama membuat package perbankan yang didalamnya berisis dua class, class Nasabah dan Tabungan. Di class Nasabah digunakan sebagai penampung nama nasabah, yang menggunakan modifier private agar informasi nama nasabah dapat disembunyikan atau dilindungi, kemudian pada class Nasabah digunkan kata kunci *this* untuk menyatakan object namaAwal dan namaAkhir yang sedang digunakan sekarang.
+  - Membuat kata kunci *super*
 
 ````java
 public class Nasabah {
