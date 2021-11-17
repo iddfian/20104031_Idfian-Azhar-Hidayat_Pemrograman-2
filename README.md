@@ -1,43 +1,137 @@
 # Modul 6 : Konsep Inheritance
 
 ## Dasar Teori
-//BELUM
-* Package
+* Pengertian Inheritance
 
-  Package merupakan suatu cara untuk mengelompokan class-class banyak yang berisi sekumpulan perogram yang dikelompokan menjadi satu dalam kategori tertentu.       Package sangat bermanfaat saat kita membuat program besar yang banyak memiliki class-class, dengan package kita dapat mengelompokanya agar mudah dalam             suatu pengerjaan program. Package juga mempengaruhi hak akses ke class-class di dalamnya dengan nama class utama harus sama dengan nama packagenya.  
-
-* Import Class
-
-  Perintah import digunakan untuk memberitahukan program kepada class-class yang terdapat dalam package tertentu yang akan di import. Import dapat dilakukan hanya   dengan sebagian class atau sub class atau semuanya.
-
-* Kata Kunci (*this*)
+  Interitance `pewarisan atau penurunan` merupakan konsep *OOP "Object-oriented programming"* `dimana sebuah class dapat menurunkan atau mewarisi property dan     methods dari perilaku induknya, dari satu class ke class lainnya`. Suatu class yang mempunyai class `turunan` dinamakan `parent class` atau `superclass           "induk"`, dan class `turunannya` dinamakan `child class` atau `subclass "anak"`. 
   
-  Kata kunci (*this*) ini digunakan dalam sebuah kelas untuk menyatakan object sekarang. Kata kunci (*this*) sangat berguna untuk menunjukkan suatu member di       dalam class-nya sendiri. (*this*) dapat digunakan baik untuk data member maupun untuk function member, serta dapat juga digunakan untuk constructor.  
-  
+  Suatu subclass "anak" mewarisi fitur yang dimiliki oleh superclass "induk"-nya. Pada subclass "anak", dia dapat menambahkan property dan methodnya `sendiri`     selain dari superclass "induk"-nya. `Kesimpulannya, dapat dikatakan bahwa suatu subclass "anak" tidak lain hanya memperluas superclass "induk" dengan           menurunkan atau mewarisi property dan methods dari perilaku atau fitur yang dimiliki induknya.` 
 
-|**this.data_member**|merujuk pada data member|
-|:-----:|:-----:|
-|**this.function_member()**|merujuk pada function member|
-|**this()**|merujuk pada construktor|
+* Deklarasi Inheritance dan Single Inheritance 
+
+  Pada JAVA `untuk mendeklarasikan suatu class` sebagai subclass "anak" dilakukan dengan cara menambahkan kata kunci `extends` setelah deklarasi nama class,           kemudian  diikuti dengan nama superclass "induk" class-nya. Contoh deklarasi Inheritance. 
+```java
+Contoh : 
+
+public class B extends A { 
+...
+} 
+```
+    Contoh : diatas memberitahukan compiler JAVA bahwa kita ingin meng "extend" class A ke class B. Dengan kata lain, class B adalah "subclass" (class anak/turunan) dari class A yang sebagai "superclass" (class induk-nya).
+  
+* Penerapaan Inheritance 
+ 
+  Pada penerapannya sebagai Inheritance, disini `class A` yang sebagai "superclass" (class induk-nya) yang menurunkan atau mewarisi property dan methods kepada     `class B` "subclass" (class anak/turunan). 
+
+````java
+public class A {
+    /*private*/protected int x;
+    /*private*/protected int y;
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void sety(int y) {
+        this.y = y;
+    }
+
+    public void getNilai(){
+        System.out.println("Nilai x : " + x + "nilai y : " + y);
+    }
+}
+````  
+  
+  Kemudian di `class B` sebagai "subclass" (class anak/turunan), menambahkan kata kunci `extends` setelah deklarasi nama class, yang menyatakan kalau class B       adalah `anak/turunan` dari class A. Kemudian  diikuti dengan nama superclass A. 
+  
+  
+````java
+  public class B extends A {
+    private int z;
+
+    public void setz(int z) {
+        this.z = z;
+    }
+
+    public void getJumlah(){
+        System.out.println("Jumlah : " + (x+y+z));
+    }
+}
+````
+ 
+* Pengaksesan Member dari Parent class
+
+    Pengaksesan member dari parent class A hanya bisa diakses dari :
+    - Class itu sendiri
+    - Subclass anak/turunan
+    - Dan Package (class yang berada satu package dengannya).
+    
+    Contoh :
+    A Ce = new A();
+    B De = new B();
+
+    `A` adalah class yang akan dipanggil member dari parent class (induk), `Ce` variable yang dipanggil saat menggunakan `class A`, `new A();` memanggil class A.
+    
+    Suatu parent class dapat tidak mewariskan sebagian member-nya kepada subclass "anak". Sejauh mana suatu member dapat diwariskan ke class lain, ataupun suatu       member dapat diakses dari class lain, sangat berhubungan  dengan access control (kontrol pengaksesan). 
+
+* Kontrol pengaksesan
+
+     Di dalam java, kontrol pengaksesan dapat digambarkan dalam tabel berikut ini : 
+
+|**Modifier**|**Class yang sama**|**Package yang sama**|**Subclass**|**Class manapun**|
+|:-----|:-----:|:-----:|:-----:|:-----:|
+|private|:heavy_check_mark:||||
+|default|:heavy_check_mark:|:heavy_check_mark:|||
+|protected|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:||
+|public|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+
+* Kata kunci super 
+
+   Kata kunci `super` dipakai untuk merujuk pada `member` dari `parent class`,  sebagaimana kata kunci `this` yang dipakai untuk merujuk pada `member dari class`    itu sendiri. 
+   Ada beberapa hal yang harus diingat ketika menggunakan pemanggil constuktor super : 
+   1. Pemanggil super() HARUS DIJADIKAN PERNYATAAN PERTAMA DALAM constructor. 
+   2. Pemanggil super() hanya dapat digunakan dalam definisi constructor. 
+   3. Termasuk constructor this() dan pemanggil super() TIDAK BOLEH  TERJADI DALAM constructor YANG SAMA.
+
+* Konstruktor tidak diwariskan 
+
+   konstruktor tidak dapat diwarisikan karena dalam `subclass "anak/turunan"` memiliki nama yang `berbeda` (nama subclass).
+   
+   ````java
+   class A {
+   A();
+}
+
+class B extends A{
+   B();
+}
+````
+Dapat melakukan seperti ini :
+
+````java
+B b = new B();
+````
+
+Adapun alasan tidak untuk mewarisikan konstruktor, karena konstruktor class A berarti membuat objek tipe A, dan konstruktor class B berarti membuat objek kelas B.
+Dalam java pemanggilan konstruktor dilakukan dengan `key super`, dan harus diletakan setelah method ":public Child()" atau "error" jika diletakan dibawah "x = 5;".
+
+Contohnya :
+
+````java
+public class Child extends Parent{
+    int x;
+
+    public Child(){
+        super();
+        x = 5;
+    }
+}
+````
 
 <hr>
 
 ## Praktikum
-
-Perbankan | :arrow_heading_down: |
-:------------ |:--------|
-
-|**Nasabah**|                                                                     **has** | **Tabungan**|
-|-----|                                                                                  ----|----| 
-|- namaAwal : String|                                                                      |- saldo : int |  
-|- namaAkhir : String|                                                                     |**-----------------------------------------------** 
-|- tabungan : Tabungan |                                                                   |+ Tabungan(saldo : int) |  
-|**--------------------------------------------------------------------**|                 |+ getSaldo() : int |
-|+ Nasabah (namaAwal : String,  namaAkhir : String) |                                      |+ ambilUang(jumlah : int) : boolean |
-|+ getNamaAwal() : String |                                                                |+ simpanUang(jumlah : int) |
-|+ getNamaAkhir () : String|
-|+ getTabungan() : Tabungan|                                                
-|+ setTabungan (tabungan : tabungan)|                                       
+                                    
 
 
 Soal :
@@ -97,6 +191,7 @@ Jumlah uang yang diambil : 1600 gagal
 Jumlah uang yang disimpan : 2000
 Saldo sekarang = 3500
 ```   
+
 
 <hr>
 
