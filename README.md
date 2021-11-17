@@ -97,12 +97,11 @@ public class A {
 
    konstruktor tidak dapat diwarisikan karena dalam `subclass "anak/turunan"` memiliki nama yang `berbeda` (nama subclass).
    
-   ````java
+````java   
    class A {
    A();
 }
-
-class B extends A{
+class B extends A {
    B();
 }
 ````
@@ -113,7 +112,7 @@ B b = new B();
 ````
 
 Adapun alasan tidak untuk mewarisikan konstruktor, karena konstruktor class A berarti membuat objek tipe A, dan konstruktor class B berarti membuat objek kelas B.
-Dalam java pemanggilan konstruktor dilakukan dengan `key super`, dan harus diletakan setelah method ":public Child()" atau "error" jika diletakan dibawah "x = 5;".
+Dalam java pemanggilan konstruktor dilakukan dengan `key super`, dan harus diletakan setelah method "public Child()" atau "error" jika diletakan dibawah "x = 5;".
 
 Contohnya :
 
