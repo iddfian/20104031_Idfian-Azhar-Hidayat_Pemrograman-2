@@ -4,7 +4,7 @@
 
 * *Overloading*
 
-  Overloading adalah suatu keadaaan dimana ada beberapa method yang memiliki `nama` yang `sama`, pada `suatu class` dengan method `lain`. Tetapi, dengan parametrnya yang `berbeda` (mempunyai implementasi dan return value). `Tujuan` dari overloading adalah `untuk memudahkan penggunaan method dengan fungsi yang hampir sama`. Overloading ini dapat terjadi pada suatu class yang sama, pada suatu superclass "parent/induk" class dan atau suatu subclass "child/anak".
+  Overloading adalah suatu keadaaan dimana ada beberapa method yang memiliki `nama` yang `sama`, pada `suatu class` dengan method `lain`. Tetapi, dengan parameter yang `berbeda` (mempunyai implementasi dan return value). `Tujuan` dari overloading adalah `untuk memudahkan penggunaan method dengan fungsi yang hampir sama`. Overloading ini dapat terjadi pada suatu class yang sama, pada suatu superclass "parent/induk" class dan atau suatu subclass "child/anak".
   
   Ciri-ciri dari suatu `Overloading` diantaranya yaitu : 
   - Memiliki nama method yang harus `sama`.
@@ -121,61 +121,72 @@ Soal :
 1. Melakukan *Overloading* pada method percobaan 1 dan 2 ! 
 
 Jawaban :
-1. [Jawaban Soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul5/src/latihan)
+1. [Jawaban soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul5/src/latihan)
 
-Pada soal praktikum kali ini mengimplementasikan UML Class Diagram Perbankan ke dalam pemrograman. Pertama membuat package perbankan yang didalamnya berisis dua class, class Nasabah dan Tabungan. Di class Nasabah digunakan sebagai penampung nama nasabah, yang menggunakan modifier private agar informasi nama nasabah dapat disembunyikan atau dilindungi, kemudian pada class Nasabah digunkan kata kunci *this* untuk menyatakan object namaAwal dan namaAkhir yang sedang digunakan sekarang.
-
-````java
-public class Nasabah {
-    private String namaAwal;
-    private String namaAkhir;
-    private latihan.Perbankan.Tabungan tabungan;
-
-    public Nasabah(String namaAwal, String namaAkhir) {
-        this.namaAwal = namaAwal;
-        this.namaAkhir = namaAkhir;
-    }
-````
-Kemudian di class kedua ini diberi nama Tabungan yang berisi nilai saldo nasabah yang menabung disini. Menggunakan modifier private dengan int (untuk menampung angka) dan saldo nilai uang yang dimiliki nasabah pada tabungan.
+   - Percobaan 1
 
 ````java
-public class Tabungan {
-    private int saldo;
-
-    public Tabungan(int saldo) {
-        this.saldo = saldo;
+public class A {
+}
+public class B extends A{
+}
+public class C extends B{
+}
+public class Overload {
+    void myOverload(A a) {
+        System.out.println("Overload.myOverload (A a)");
     }
- ````
-Membuat class main method TesLatihan, disini digunakan perintah import untuk memberitahukan program kepada class Nasabah dan class Tabungan yang terdapat dalam package Perbankan yang sudah import. new nasabah bernama Agus Daryanto yang menabung dengan saldo awal sebesar limaribu.
- 
- ````java   
-import latihan.Perbankan.Nasabah;
-import latihan.Perbankan.Tabungan;
-public class TesLatihan {
+
+    void myOverload(byte b) {
+        System.out.println("Overload.myOverload (B b)");
+    }
+
     public static void main(String[] args) {
-        int tmp;
-        boolean status;
-        Nasabah nasabah = new Nasabah("Agus","Daryanto");
-        System.out.println("Nasabah atas nama : " + nasabah.getNamaAwal() + " " + nasabah.getNamaAkhir());
-        nasabah.setTabungan(new Tabungan(5000));
-        tmp = nasabah.getTabungan().getSaldo();
+        Modul7.percobaan.Overload o = new Modul7.percobaan.Overload();
+        Modul7.percobaan.C c = new C();
+
+        o.myOverload(c);
+    }
+}
+````
+Output program percobaan 1 menampilkan :
+
+````java
+Overload.myOverload (A a)
 ````
 
-Hasil running program menampilkan :
+   - Percobaan 2
 
-```java
-Nasabah atas nama : Agus Daryanto
-Saldo awal : 5000
-Jumlah uang yang disimpan : 3000
-Jumlah uang yang diambil : 6000 Ok
-Jumlah uang yang disimpan : 3500
-Jumlah uang yang diambil : 4000 Ok
-Jumlah uang yang diambil : 1600 gagal
-Jumlah uang yang disimpan : 2000
-Saldo sekarang = 3500
-```   
+````java
+public class Overload1 {
+    void myMethod(short s) {
+        System.out.println("sort");
+    }
+
+    void myMethod(int i) {
+        System.out.println("int");
+    }
+
+    void myMethod(long l) {
+        System.out.println("long");
+    }
+
+    public static void main(String[] args) {
+        Overload o = new Overload();
+        byte b = 1;
+
+        o.myOverload(b);
+    }
+}
+````
+
+Output program percobaan 2 menampilkan :
+
+````java
+Overload.myOverload (B b)
+````
 
 <hr>
 
 ## Kesimpulan
-Dari praktikum modul 5 ini mahasiswa dapat memahami mengenai konsep package dan import serta menggunakan kata kunci *this* yang sebelumnya di contohkan pada percobaan satu dan dua, mengimplementasikan UML Class Diagram sekolah ke dalam program. Membuat package sekolah yang berisi class kelas, dan membuat class mahasiswa yang digunakan sebagai inportnya. Kemudian mengerjakan tugas latihan mengimplementasikan UML Class Diagram Perbankan ke dalam program, yang harus menghasilkan output seperti yang ditentukan.
+Dari praktikum modul 7 ini mahasiswa dapat memahami tentang *overloading* yaitu adalah suatu keadaaan dimana ada beberapa method yang memiliki `nama` yang `sama`, pada suatu class dengan method lain. Tetapi, dengan parameter yang `berbeda`, memahami tentang *overriding* yaitu sebuah mekanisme dimana metode yang terdapat pada superclass "induk" dapat dideklarasikan ulang atau diturunkan methodnya kepada subclass "anak" atau pewarisan. Dan mahasiswa memahami aturan tentang *overidden*seperti List dari `Nama method`, `Daftar parameter`, Dan `Return type` harus benar-benar `sama`, termasuk `tipe data` dan urutan pada `argumen` tersebut, dan adanya aturan agar suatu program *overridden* dapat berjalan dengan baik. Dan mengerjakan soal praktikum untuk mengamati apa yang terjadi pada program 1 dan 2. 
