@@ -1,4 +1,4 @@
-# 20104031_Idfian-Azhar-Hidayat_Pemrograman-2
+# 20104031_Idfian-Azhar-Hidayat_Pemrograman2
 
 ### Praktikum Pemrograman 2
 
