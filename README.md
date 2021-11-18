@@ -4,7 +4,7 @@
 
 * *Overloading*
 
-  Overloading adalah suatu keadaaan dimana ada beberapa method yang memiliki `nama` yang `sama`, pada `suatu class` dengan method `lain`. Tetapi, dengan parameter yang `berbeda` (mempunyai implementasi dan return value). `Tujuan` dari overloading adalah `untuk memudahkan penggunaan method dengan fungsi yang hampir sama`. Overloading ini dapat terjadi pada suatu class yang sama, pada suatu superclass "parent/induk" class dan atau suatu subclass "child/anak".
+  Overloading adalah suatu keadaaan dimana ada beberapa method yang memiliki `nama` yang `sama`, pada `suatu class` dengan method `lain`. Tetapi, dengan parameter yang `berbeda` (mempunyai implementasi dan return value). `Tujuan` dari overloading adalah `untuk memudahkan penggunaan method dengan fungsi yang hampir sama`. Overloading ini dapat terjadi pada suatu class yang sama, pada suatu superclass "parent/induk" class dan atau suatu subclass "child/anak"nya.
   
   Ciri-ciri dari suatu `Overloading` diantaranya yaitu : 
   - Memiliki nama method yang harus `sama`.
@@ -59,7 +59,7 @@ Haloo... namaku Idfian Azhar Hidayat
 class Burung :
   
 ````java
-  public class Burung { // parent/"induk" class
+public class Burung { // parent/"induk" class
     /*
     class Burung memiliki method bernama 'terbang', jika meethod dipanggil dari objek 'Burung' maka
     method ini akan dieksekusi atau dioverride ketika 'terbang()' dipanggil.
@@ -72,12 +72,12 @@ class Burung :
   class Penguin :
   
 ````java
-  public class Penguin extends Burung{ // child/"anak" class
-     /*
-    Jika meethod 'terbang' ini dipanggil dari objek 'Penguin' maka
-    method ini juga akan dieksekusi ketika 'terbang()' dipanggil
-     */
-    @Override
+public class Penguin extends Burung{ // child/"anak" class
+    /*
+   Jika meethod 'terbang' ini dipanggil dari objek 'Penguin' maka
+   method ini juga akan dieksekusi ketika 'terbang()' dipanggil
+    */
+    @java.lang.Override
     public void terbang(){
         System.out.println("Aku tidak bisa terbang!");
     }
@@ -118,7 +118,7 @@ public class Overriding {
 ## Praktikum
 
 Soal :
-1. Melakukan *Overloading* pada method percobaan 1 dan 2 ! 
+1. Mengamati *Overloading* pada method percobaan 1 dan 2 ! 
 
 Jawaban :
 1. [Jawaban soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul5/src/latihan)
@@ -132,28 +132,32 @@ public class B extends A{
 }
 public class C extends B{
 }
-public class Overload {
+public class Overload { // memiliki 2 method
     void myOverload(A a) {
         System.out.println("Overload.myOverload (A a)");
     }
 
-    void myOverload(byte b) {
+    void myOverload(B b) {
         System.out.println("Overload.myOverload (B b)");
     }
 
     public static void main(String[] args) {
-        Overload o = new Overload();
-        C c = new C();
+        Overload o = new Overload(); // objek class Overload bernama o
+     // A a = new A();// objek class A bernama a
+        C c = new C(); // objek class C bernama c
 
-        o.myOverload(c);
+    //  o.myOverload(a);// memanggil method yang ada pada class Overload dengan mengisi parameter objek class A
+        o.myOverload(c); // memanggil method yang ada pada class Overload dengan mengisi parameter objek class C
     }
 }
 ````
 Output program percobaan 1 menampilkan :
 
 ````java
-Overload.myOverload (A a)
+Overload.myOverload (B b)
 ````
+Kenapa hasil run programnya hanya menampilkan `Overload.myOverload (B b)` ? Karena pada program diatas tidak ada method myOverload yang parameternya itu (C c) atau `lebih dekat` selain myOverload (B b). Karena itu pada output program diatas menampilkan method `Overload.myOverload (B b)` dimana parameter (B b) lebih dekat dengan (method yang dicari).
+
 
    - Percobaan *overloading* pada method 2
 
@@ -172,10 +176,10 @@ public class Overload1 {
     }
 
     public static void main(String[] args) {
-        Overload o = new Overload();
+        Overload1 o = new Overload1();
         byte b = 1;
 
-        o.myOverload(b);
+        o.myMethod(b);
     }
 }
 ````
@@ -183,8 +187,10 @@ public class Overload1 {
 Output program percobaan 2 menampilkan :
 
 ````java
-Overload.myOverload (B b)
+sort
 ````
+Kenapa hasil run programnya hanya menampilkan `sort` ? Karena pada program diatas menggunakan tipe data `byte`, dimana tipe data `sort`lah yang `ukuran` tipe datanya yang `lebih dekat` dengan method yang dicari. Maka tipe data `sort`lah yang ditampilkan karena lebih dekat dibandingkan dengan tipe data `int` dan `long`. 
+
 
 <hr>
 
