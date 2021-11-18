@@ -123,7 +123,7 @@ Soal :
 Jawaban :
 1. [Jawaban soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul5/src/latihan)
 
-  - Percobaan *overloading* 1
+  - Percobaan *overloading* pada method 1
 
 ````java
 public class A {
@@ -155,7 +155,7 @@ Output program percobaan 1 menampilkan :
 Overload.myOverload (A a)
 ````
 
-   - Percobaan *overloading* 2
+   - Percobaan *overloading* pada method 2
 
 ````java
 public class Overload1 {
@@ -189,4 +189,4 @@ Overload.myOverload (B b)
 <hr>
 
 ## Kesimpulan
-Dari praktikum modul 7 ini mahasiswa dapat memahami tentang *overloading* yaitu adalah suatu keadaaan dimana ada beberapa method yang memiliki `nama` yang `sama`, pada suatu class dengan method lain. Tetapi, dengan parameter yang `berbeda`, memahami tentang *overriding* yaitu sebuah mekanisme dimana metode yang terdapat pada superclass "induk" dapat dideklarasikan ulang atau diturunkan methodnya kepada subclass "anak" atau pewarisan. Dan mahasiswa memahami aturan tentang *overidden*seperti List dari `Nama method`, `Daftar parameter`, Dan `Return type` harus benar-benar `sama`, termasuk `tipe data` dan urutan pada `argumen` tersebut, dan adanya aturan agar suatu program *overridden* dapat berjalan dengan baik. Dan mengamati soal praktikum *overloading* 1 dan 2. 
+Dari praktikum modul 7 ini mahasiswa dapat memahami tentang *overloading* yaitu adalah suatu keadaaan dimana ada beberapa method yang memiliki `nama` yang `sama`, pada suatu class dengan method lain. Tetapi, dengan parameter yang `berbeda`, memahami tentang *overriding* yaitu sebuah mekanisme dimana metode yang terdapat pada superclass "induk" dapat dideklarasikan ulang atau diturunkan methodnya kepada subclass "anak" atau pewarisan. Dan mahasiswa memahami aturan tentang *overidden*seperti List dari `Nama method`, `Daftar parameter`, Dan `Return type` harus benar-benar `sama`, termasuk `tipe data` dan urutan pada `argumen` tersebut, dan adanya aturan agar suatu program *overridden* dapat berjalan dengan baik. Dan mengamati soal praktikum percobaan *overloading* pada method 1 dan 2. 
