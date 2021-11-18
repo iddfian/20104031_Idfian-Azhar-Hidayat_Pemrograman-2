@@ -99,7 +99,7 @@ public class Overriding {
   
   * Aturan tentang *Overridden* method
   
-    Tujuan dari Method Overriding adalah jika class 'induk' ingin memberikan implementasinya sendiri, ia dapat memberikannya dengan `meng-override` method dari class 'induk' kepada subclass 'anak'. 
+    Tujuan dari Method Overriding adalah jika class 'induk' ingin memberikan implementasinya sendiri, ia dapat memberikannya dengan `meng-override` method dari class `induk` kepada subclass `anak`. 
     
     Beberapa aturan penting untuk *Overridden* pada JAVA :
       - List dari `Nama method`, `Daftar parameter`, Dan `Return type` harus benar-benar `sama`, termasuk `tipe data` dan urutan pada `argumen` tersebut.
@@ -142,8 +142,8 @@ public class Overload {
     }
 
     public static void main(String[] args) {
-        Modul7.percobaan.Overload o = new Modul7.percobaan.Overload();
-        Modul7.percobaan.C c = new C();
+        Overload o = new Overload();
+        C c = new C();
 
         o.myOverload(c);
     }
