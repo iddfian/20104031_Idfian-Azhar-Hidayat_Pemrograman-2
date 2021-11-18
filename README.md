@@ -156,7 +156,7 @@ Output program percobaan 1 menampilkan :
 ````java
 Overload.myOverload (B b)
 ````
-Kenapa hasil run programnya hanya menampilkan `Overload.myOverload (B b)` ? Karena pada program diatas tidak ada method myOverload yang parameternya itu (C c) atau `lebih dekat` selain myOverload (B b). Karena itu pada output program diatas menampilkan method `Overload.myOverload (B b)` dimana parameter (B b) lebih dekat dengan (method yang dicari).
+Kenapa hasil run programnya hanya menampilkan `Overload.myOverload (B b)` ? Karena pada program diatas tidak ada method myOverload yang parameternya itu (C c) atau `lebih dekat` selain myOverload (B b). Karena itu pada output program diatas menampilkan method `Overload.myOverload (B b)` dimana parameter (B b) lebih dekat dengan `method yang dicari`.
 
 
    - Percobaan *overloading* pada method 2
@@ -189,7 +189,7 @@ Output program percobaan 2 menampilkan :
 ````java
 sort
 ````
-Kenapa hasil run programnya hanya menampilkan `sort` ? Karena pada program diatas menggunakan tipe data `byte`, dimana tipe data `sort`lah yang `ukuran` tipe datanya yang `lebih dekat` dengan method yang dicari. Maka tipe data `sort`lah yang ditampilkan karena lebih dekat dibandingkan dengan tipe data `int` dan `long`. 
+Kenapa hasil run programnya hanya menampilkan `sort` ? Karena pada program diatas menggunakan tipe data `byte`, dimana tipe data `sort`lah yang `ukuran` tipe datanya `lebih dekat` dengan method yang dicari. Maka tipe data `sort`lah yang ditampilkan karena lebih dekat dibandingkan dengan tipe data `int` dan `long`. 
 
 
 <hr>
