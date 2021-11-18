@@ -189,10 +189,10 @@ Output program percobaan 2 menampilkan :
 ````java
 sort
 ````
-Kenapa hasil run programnya hanya menampilkan `sort` ? Karena pada program diatas menggunakan tipe data `byte`, dimana tipe data `sort`lah yang `ukuran` tipe datanya `lebih dekat` dengan method yang dicari. Maka tipe data `sort`lah yang ditampilkan karena lebih dekat dibandingkan dengan tipe data `int` dan `long`. 
+Kenapa hasil run programnya hanya menampilkan `sort` ? Karena pada program diatas menggunakan tipe data `byte`, dimana tipe data `sort`lah yang `ukuran` tipe datanya `lebih dekat` dengan `method yang dicari`. Maka tipe data `sort`lah yang ditampilkan karena lebih dekat dibandingkan dengan tipe data `int` dan `long`. 
 
 
 <hr>
 
 ## Kesimpulan
-Dari praktikum modul 7 ini mahasiswa dapat memahami tentang *overloading* yaitu adalah suatu keadaaan dimana ada beberapa method yang memiliki `nama` yang `sama`, pada suatu class dengan method lain. Tetapi, dengan parameter yang `berbeda`, memahami tentang *overriding* yaitu sebuah mekanisme dimana metode yang terdapat pada superclass "induk" dapat dideklarasikan ulang atau diturunkan methodnya kepada subclass "anak" atau pewarisan. Dan mahasiswa memahami aturan tentang *overidden*seperti List dari `Nama method`, `Daftar parameter`, Dan `Return type` harus benar-benar `sama`, termasuk `tipe data` dan urutan pada `argumen` tersebut, dan adanya aturan agar suatu program *overridden* dapat berjalan dengan baik. Dan mengamati soal praktikum percobaan *overloading* pada method 1 dan 2. 
+Dari praktikum modul 7 ini mahasiswa dapat memahami tentang *overloading* yaitu suatu keadaaan dimana ada beberapa method yang memiliki `nama` yang `sama`, pada suatu class dengan method lain. Tetapi, dengan parameter yang `berbeda`, memahami tentang *overriding* yaitu sebuah mekanisme dimana metode yang terdapat pada superclass "induk" dapat dideklarasikan ulang atau diturunkan methodnya kepada subclass "anak" atau pewarisan. Dan mahasiswa memahami aturan tentang *overidden*seperti List dari `Nama method`, `Daftar parameter`, Dan `Return type` harus benar-benar `sama`, termasuk `tipe data` dan urutan pada `argumen` tersebut, dan adanya aturan agar suatu program *overridden* dapat berjalan dengan baik. Dan mengamati soal praktikum percobaan *overloading* pada method 1 dan 2. 
