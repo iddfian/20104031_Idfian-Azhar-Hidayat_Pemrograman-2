@@ -123,7 +123,7 @@ Soal :
 1. Mengamati *Overloading* pada method percobaan 1 dan 2 ! 
 
 Jawaban :
-1. [Jawaban soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul7/src/Modul7/percobaan)
+1. [Jawaban soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul8/src/latihan)
 
   - Percobaan *overloading* pada method 1
 
