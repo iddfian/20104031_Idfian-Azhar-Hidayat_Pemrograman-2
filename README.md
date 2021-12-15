@@ -52,12 +52,7 @@ Memanggil mailCheck Berdasarkan  Referensi Pegawai--
 Memeriksa kelas gaji dalam  surat 
 Surat tertuju untuk Ini nama dengan gaji 2500.0
 ````
-Kenapa hasil run programnya hanya menampilkan seperti ini ? Karena pada program diatas
-
-Syarat terjadinya VMI adalah suatu obyek yang sudah dibuat untuk memanggil overridden method pada parent class, kemudian compiler Java melakukan pemanggilan overriding pada subclass, dimana yang seharusnya dipanggil adalah overridden.
-Pada VMI atribut parent akan menutupi atribut dari child sedangkan untuk method yang dijalankan tetap berstatus sama dengan overiding method.
-
-Karena pada program diatas menggunakan tipe data `byte`, dimana tipe data `sort`lah yang `ukuran` tipe datanya `lebih dekat` dengan `method yang dicari`. Maka tipe data `sort`lah yang ditampilkan karena lebih dekat dibandingkan dengan tipe data `int` dan `long`. 
+Kenapa hasil run programnya hanya menampilkan seperti ini ? Karena pada program diatas suatu objek dibuat untuk memanggil overridden method pada parent class, kemudian compiler Java melakukan pemanggilan overriding pada subclass, dimana yang seharusnya dipanggil adalah overridden. Pada VMI atribut parent akan menutupi atribut dari child sedangkan untuk method yang dijalankan tetap berstatus sama dengan overiding method.
 
 <hr>
 
