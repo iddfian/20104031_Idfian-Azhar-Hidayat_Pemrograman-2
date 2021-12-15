@@ -4,116 +4,28 @@
 
 -BELUM-
 
-* *Overloading*
+* Konsep dasar polimorfisme
 
-  Overloading adalah suatu keadaaan dimana ada beberapa method yang memiliki `nama` yang `sama`, pada `suatu class` dengan method `lain`. Tetapi, dengan parameter yang `berbeda` (mempunyai implementasi dan return value). `Tujuan` dari overloading adalah `untuk memudahkan penggunaan method dengan fungsi yang hampir sama`. Overloading ini dapat terjadi pada suatu class yang sama, pada suatu superclass "parent/induk" class dan atau suatu subclass "child/anak"nya.
+    Polymorphism adalah salah satu konsep alam object oriented programming (OOP) di Java setelah abstraction dan inheritance. Polymorphism berarti banyak ‘bentuk’method yang berbeda-beda meskipun namanya sama. Polymorphism sering dikaitkan dengan penggunaan lebih dari satu metoda dengan nama sama. Penggunaan metoda dengan nama sama dapat melalui method overloading dan method overriding. Peran polymorphism tidak terbatas hanya pada hal-hal tersebut. Ada kaitan erat antara polymorphism dan inheritance (turunan).
   
-  Ciri-ciri dari suatu `Overloading` diantaranya yaitu : 
-  - Memiliki nama method yang harus `sama`.
-  - Daftar Parameter yang harus `berbeda`.
-  - Dan Return type-nya boleh `sama` dan boleh juga `berbeda`.
-  
-  class Mahasiswa : memiliki method bernama `info` tetapi `parameter` yang dimilikinya `berbeda` berupa `String nama`.
-  
-````java
-  public class Mahasiswa {
-    public void info() {
-        //Method ini akan dijalankan jika parameter 'tidak' diisi, (hanya menampikan : Haloo... aku mahasiswa!)
-        System.out.println("Haloo... aku mahasiswa!");
-    }
-    //Dan method ini akan dijalankan jika parametrnya diisi, (method ini memiliki parameter 'String nama' jika parameter 'nama' diisi maka akan menampilkan ke2 outputnya)
-    public void info(String nama) {
-        System.out.println("Haloo... namaku " + nama);
-    }
-}
-````
 
-- class Main (*Overloading*).
+* Virtual Method Invocation 
 
-````java
-public class Main {
-    public static void main(String[] args) {
-        Mahasiswa aku = new Mahasiswa();
-
-        aku.info();
-        aku.info("Idfian Azhar Hidayat");
-    }
-}
-````
-
-- Output program menampilkan :
-
-````java
-Haloo... aku mahasiswa!
-Haloo... namaku Idfian Azhar Hidayat
-````
-
-* *Overriding*
-
-    Overriding adalah mekanisme dimana sebuah metode yang terdapat pada superclass "induk" dapat dideklarasikan ulang atau `diturunkan` methodnya kepada subclass "anak". Jika pada Overloading daftar `parameternya` harus `berbeda`, sedangkan pada Overriding daftar parameternya haruslah `sama`. Method yang `terkena` Override diharuskan atau `tidak boleh` mempunyai modifier yang `lebih luas` aksesnya, dari method yang `mengoverride` misalnya : (`protcted menjadi public`).
-  
-  Ciri-ciri dari suatu `Overriding` diantaranya yaitu :
-  - Nama method yang harus `sama`.
-  - Daftar parameter yang harus `sama`.
-  - Dan Return type juga harus `sama`.
+    Virtual method invocation merupakan suatu hal yang sangat penting di polimorfisme. Syarat terjadinya VMI adalah suatu obyek yang sudah dibuat untuk memanggil overridden method pada parent class, kemudian compiler Java melakukan pemanggilan overriding pada subclass, dimana yang seharusnya dipanggil adalah overridden.
   
   
-class Burung :
+* Polymorphic arguments 
   
-````java
-public class Burung { // parent/"induk" class
-    /*
-    class Burung memiliki method bernama 'terbang', jika meethod dipanggil dari objek 'Burung' maka
-    method ini akan dieksekusi atau dioverride ketika 'terbang()' dipanggil.
-     */
-    public void terbang(){
-        System.out.println("Aku terbang!");
-    }
-}
-````
-  class Penguin :
-  
-````java
-public class Penguin extends Burung{ // child/"anak" class
-    /*
-   Jika meethod 'terbang' ini dipanggil dari objek 'Penguin' maka
-   method ini juga akan dieksekusi ketika 'terbang()' dipanggil
-    */
-    @java.lang.Override
-    public void terbang(){
-        System.out.println("Aku tidak bisa terbang!");
-    }
-}
-````
-- class *Overriding*.
+    Polymorphic arguments adalah sebuah tipe data method yang bisa menerima suatu nilai yang bertipe subclass.  Polymorphic arguments digunakan untuk dapat mengefisienkan satu method yang bisa digunakan untuk menangani behavior semua subclass.
 
-````java
-public class Overriding {
-    public static void main(String[] args) {
-        Burung burung = new Burung();
-        Penguin penguin = new Penguin();
 
-        burung.terbang();
-        penguin.terbang();
-    }
-}
-````
-  
-  * Aturan tentang *Overridden* method
-  
-    Tujuan dari Method Overriding adalah jika class 'induk' ingin memberikan implementasinya sendiri, ia dapat memberikannya dengan `meng-override` method dari class `induk` kepada subclass `anak`. 
-    
-    Beberapa aturan penting untuk *Overridden* pada JAVA :
-      - List dari `Nama method`, `Daftar parameter`, Dan `Return type` harus benar-benar `sama`, termasuk `tipe data` dan urutan pada `argumen` tersebut.
-      - Acces modifier pada overriding method `tidak boleh` lebih luas aksesnya, dari method yang `mengoverride`.
-      - Jika overridden method adalah `default` maka overriding harus `default`, `protected/public`.
-      - Jika overridden method adalah `protected` maka overriding `harus protected/public`.
-      - Jika overridden method adalah `public`, maka overriding `harus public`.
-      - Jika suatu class `inheritance` mengimplementasikan interface, maka `class` tersebut harus meng-override `semua` method `kecuali` class itu sendiri.
-      - Method static, private dan final tidak bisa di-override. Namun method static bisa dideklarasikan ulang pada subclass 'anak'.
-      - Jika method `tidak bisa` diturunkan/diwariskan, maka `tidak bisa` di-override.
-      - Suatu constructor `tidak bisa` untuk di-override.
-      - Untuk `memanggil` overriden method melalui subclass 'anak' dapat menggunakan key `super`.
+* Pernyataan instanceof 
+
+    Instanceof adalah salah satu keyword pada Java, yang digunakan untuk membandingkan suatu objek, untuk menghasilkan nilai boolean berupa nilai true atau false. instanceof digunakan untuk memeriksa apakah suatu objek adalah turunan dari class, turunan dari subclass, atau turunan dari class yang mengimplementasikan tipe tertentu.
+
+* Casting object 
+
+    Casting pada object adalah mengubah tipe class pada suatu object. Seperti contohnya mengkonversi data dari tipe string ke tipe numerik tertentu dan lain sebagainya. Syarat casting objek adalah harus berada di dalam hierarki turunan (inheritance hierarchy).
 
 <hr>
 
