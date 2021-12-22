@@ -4,17 +4,11 @@
 
 * Exception 
 
-    P
-  
-
-* Tipe-tipe exception
-
-    V
-  
+    Exceptions adalah suatu anomali yang terjadi pada saat menjalankan suatu program, yang menunjukan suatu error atau kondisi mencegah hasil berjalan secara normal. Teknik yang dipakai dalam Java untuk menangani kondisi yang tidak biasa disebut exception handling. Jika exception tidak ditangani maka program akan berhenti secara abnormal. Sebagai contoh ketika mengakses suatu array index yang menggunakan index out of bonds, maka saat menjalnkanya akan mendapatkan error program ArrayIndexOutOfBoundsException karena ingin mengakses elemen array yang tidak ada.  
   
 * Exception handling 
   
-    P
+    Exception handling merupakan bagian penting dalam aplikasi Java yang baik dalam menangani error pada saat program berjalan atau biasa disebut runtime error. Adanya error dalam program dapat memyebabkan program atau sebuah aplikasi tersebut berhenti. Untuk itu diperlukan program `exceprion handling` dalam programnya untuk mamastikan program dapat berjalan meski terdapat error di dalamya. Java menyediakan beberapa fitur untuk exception heandling, `try`, `catch` dan `finally`. Dalam  Java juga memungkinkan untuk membuat exception yang baru dan melemparnya dengan menggunakan `throw` dan `throws`.
 
 <hr>
 
@@ -24,16 +18,34 @@ Soal :
 1. Latihan method exception ! 
 
 Jawaban :
-1. [Jawaban soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul8/src/latihan)
 
-  - Virtual Method Invocation (VMI)
+  - Method yang melempar checked exception()
 
-Output program percobaan menampilkan :
+Output program menampilkan :
 
 ````java
-
+File Tidak Ada
 ````
-K
+
+   - Method yang melempar unchecked exception()
+
+Output program menampilkan :
+
+````java
+Masukan Angka : 7
+Angka kurang dari atau sama dengan 10
+Selesai
+````
+
+   - Menggunakan konsep Inheritance untuk membuat superclass dan subclass exception. Program menangani exception dengan menangkap subclass exception dengan superclass()
+
+Output program menampilkan :
+
+|**Exception**|
+|:-----:|
+|**( i ) praktikum.latihan.ExceptionC**|
+|**OK**|
+
 
 <hr>
 
