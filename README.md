@@ -50,6 +50,4 @@ Output program menampilkan :
 <hr>
 
 ## Kesimpulan
-Dari praktikum modul 9 ini mahasiswa dapat memahami tentang 
-
-menerapkan konsep polimorfisme dalam pemrograman berarti 'banyak bentuk' method yang berbeda-beda meskipun namanya sama, memahami proses terjadinya Virtual Method Invocation adalah suatu obyek yang sudah dibuat untuk memanggil overridden method pada parent class, kemudian compiler Java melakukan pemanggilan overriding pada subclass, dimana yang seharusnya dipanggil adalah overridden, memahami dan menerapkan polymorphic arguments dalam pemrograman yang digunakan untuk dapat mengefisienkan satu method yang bisa digunakan untuk menangani behavior semua subclass, dan memahami penggunaan instanceof dan cara melakukan casting object mengkonversi data dari tipe string ke tipe numerik tertentu dan lain sebagainya. 
+Dari praktikum modul 9 ini mahasiswa dapat memahami mengenai exception yaitu exceptions adalah suatu anomali yang terjadi pada saat menjalankan suatu program, yang menunjukan suatu error atau kondisi mencegah hasil berjalan secara normal, Memahami tipe exception yaitu Checked Exception (merupakan exception yang dicheck atau diketahui saat dikompilasi) dan Unchecked Exception (merupakan exception yang baru dicheck atau diketahui saat runtime), Menangani exception menggunakan try, catch, finally, throw dan throws (melempar exception).
