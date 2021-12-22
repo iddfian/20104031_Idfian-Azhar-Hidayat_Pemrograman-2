@@ -21,7 +21,7 @@
 ## Praktikum
 
 Soal :
-1. Latihan Exception ! 
+1. Latihan method exception ! 
 
 Jawaban :
 1. [Jawaban soal 1](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/tree/Modul8/src/latihan)
