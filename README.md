@@ -19,7 +19,7 @@ Soal :
 
 Jawaban :
 
-  - Method yang melempar checked exception()
+  - [Method yang melempar checked exception](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/blob/Modul9/src/Praktikum/latihan/Percobaan7.java)
 
 Output program menampilkan :
 
@@ -27,7 +27,7 @@ Output program menampilkan :
 File Tidak Ada
 ````
 
-   - Method yang melempar unchecked exception()
+   - [Method yang melempar unchecked exception](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/blob/Modul9/src/Praktikum/latihan/Percobaan.java)
 
 Output program menampilkan :
 
@@ -37,7 +37,7 @@ Angka kurang dari atau sama dengan 10
 Selesai
 ````
 
-   - Menggunakan konsep Inheritance untuk membuat superclass dan subclass exception. Program menangani exception dengan menangkap subclass exception dengan superclass()
+   - [Menggunakan konsep Inheritance untuk membuat superclass dan subclass exception. Program menangani exception dengan menangkap subclass exception dengan superclass](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/blob/Modul9/src/Praktikum/latihan/Demo.java)
 
 Output program menampilkan :
 
