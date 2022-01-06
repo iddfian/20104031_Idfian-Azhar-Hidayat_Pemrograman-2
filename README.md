@@ -2,52 +2,121 @@
 
 ## Dasar Teori
 
-* Exception 
-
-    Exceptions adalah suatu anomali yang terjadi pada saat menjalankan suatu program, yang menunjukan suatu error atau kondisi mencegah hasil berjalan secara normal. Teknik yang dipakai dalam Java untuk menangani kondisi yang tidak biasa disebut exception handling. Jika exception tidak ditangani maka program akan berhenti secara abnormal. Sebagai contoh ketika mengakses suatu array index yang menggunakan index out of bonds, maka saat menjalnkanya akan mendapatkan error program ArrayIndexOutOfBoundsException karena ingin mengakses elemen array yang tidak ada.  
-  
-* Exception handling 
-  
-    Exception handling merupakan bagian penting dalam aplikasi Java yang baik dalam menangani error pada saat program berjalan atau biasa disebut runtime error. Adanya error dalam program dapat memyebabkan program atau sebuah aplikasi tersebut berhenti. Untuk itu diperlukan program `exceprion handling` dalam programnya untuk mamastikan program dapat berjalan meski terdapat error di dalamya. Java menyediakan beberapa fitur untuk exception heandling, `try`, `catch` dan `finally`. Dalam  Java juga memungkinkan untuk membuat exception yang baru dan melemparnya dengan menggunakan `throw` dan `throws`.
+* Tic 
 
 <hr>
 
 ## Praktikum
 
 Soal :
-1. Latihan method exception ! 
+1. [TicTacToeOOP](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/blob/tubes/src/game.java) 
 
-Jawaban :
-
-  - [Method yang melempar checked exception](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/blob/Modul9/src/Praktikum/latihan/Percobaan7.java)
+Jawaban : 
 
 Output program menampilkan :
 
 ````java
-File Tidak Ada
+Cara Bermain: Tekan Enter, pilih angka Baris dan Kolom = (Baris '-' angka: 1, 2, 3) dan (Kolom '||' angka: 1, 2, 3) ENTER.
+-------------
+| _ | _ | _ | 
+| _ | _ | _ | 
+| _ | _ | _ | 
+-------------
+1
+1
+
+Cara Bermain: Tekan Enter, pilih angka Baris dan Kolom = (Baris '-' angka: 1, 2, 3) dan (Kolom '||' angka: 1, 2, 3) ENTER.
+-------------
+| X | _ | _ | 
+| _ | _ | _ | 
+| _ | _ | _ | 
+-------------
+2
+2
+
+Cara Bermain: Tekan Enter, pilih angka Baris dan Kolom = (Baris '-' angka: 1, 2, 3) dan (Kolom '||' angka: 1, 2, 3) ENTER.
+-------------
+| X | _ | _ | 
+| _ | O | _ | 
+| _ | _ | _ | 
+-------------
+3
+3
+
+Cara Bermain: Tekan Enter, pilih angka Baris dan Kolom = (Baris '-' angka: 1, 2, 3) dan (Kolom '||' angka: 1, 2, 3) ENTER.
+-------------
+| X | _ | _ | 
+| _ | O | _ | 
+| _ | _ | X | 
+-------------
+3
+1
+
+Cara Bermain: Tekan Enter, pilih angka Baris dan Kolom = (Baris '-' angka: 1, 2, 3) dan (Kolom '||' angka: 1, 2, 3) ENTER.
+-------------
+| X | _ | _ | 
+| _ | O | _ | 
+| O | _ | X | 
+-------------
+2
+3
+
+Cara Bermain: Tekan Enter, pilih angka Baris dan Kolom = (Baris '-' angka: 1, 2, 3) dan (Kolom '||' angka: 1, 2, 3) ENTER.
+-------------
+| X | _ | _ | 
+| _ | O | X | 
+| O | _ | X | 
+-------------
+4
+4
+Salah, angka di luar kotak
+Coba lagi!
+2
+2
+Sudah di isi
+3
+2
+
+Cara Bermain: Tekan Enter, pilih angka Baris dan Kolom = (Baris '-' angka: 1, 2, 3) dan (Kolom '||' angka: 1, 2, 3) ENTER.
+-------------
+| X | _ | _ | 
+| _ | O | X | 
+| O | O | X | 
+-------------
+2
+1
+
+Cara Bermain: Tekan Enter, pilih angka Baris dan Kolom = (Baris '-' angka: 1, 2, 3) dan (Kolom '||' angka: 1, 2, 3) ENTER.
+-------------
+| X | _ | _ | 
+| X | O | X | 
+| O | O | X | 
+-------------
+3
+1
+Sudah di isi
+2
+3
+Sudah di isi
+1
+2
+
+Cara Bermain: Tekan Enter, pilih angka Baris dan Kolom = (Baris '-' angka: 1, 2, 3) dan (Kolom '||' angka: 1, 2, 3) ENTER.
+-------------
+| X | O | _ | 
+| X | O | X | 
+| O | O | X | 
+-------------
+
+Pemenagnya: O
+
+Process finished with exit code 0
 ````
 
-   - [Method yang melempar unchecked exception](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/blob/Modul9/src/Praktikum/latihan/Percobaan.java)
 
-Output program menampilkan :
-
-````java
-Masukan Angka : 7
-Angka kurang dari atau sama dengan 10
-Selesai
-````
-
-   - [Menggunakan konsep Inheritance untuk membuat superclass dan subclass exception. Program menangani exception dengan menangkap subclass exception dengan superclass](https://github.com/iddfian/20104031_Idfian-Azhar-Hidayat_Pemrograman-2/blob/Modul9/src/Praktikum/latihan/Demo.java)
-
-Output program menampilkan :
-
-|**Exception**|
-|:-----:|
-|**( i ) praktikum.latihan.ExceptionC**|
-|**OK**|
 
 
 <hr>
 
 ## Kesimpulan
-Dari praktikum modul 9 ini mahasiswa dapat memahami mengenai exception yaitu exceptions adalah suatu anomali yang terjadi pada saat menjalankan suatu program, yang menunjukan suatu error atau kondisi mencegah hasil berjalan secara normal, Memahami tipe exception yaitu Checked Exception (merupakan exception yang dicheck atau diketahui saat dikompilasi) dan Unchecked Exception (merupakan exception yang baru dicheck atau diketahui saat runtime), Menangani exception menggunakan try, catch, finally, throw dan throws (melempar exception).
+Tugas Besar
