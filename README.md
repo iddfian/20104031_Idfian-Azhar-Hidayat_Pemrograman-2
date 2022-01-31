@@ -10,27 +10,39 @@
 * Dani Azka Faz (20104024)
 * Elan Bagaskoro (20104027)
 * Idfian Azhar Hidayat (20104031)
+* `LINK Presentasi :` [Tic-tac-toe oop](https://drive.google.com/file/d/1GkO6SHeWWhk7rJWGmNLQSlnAwk8GDknj/view)
 
 ## TicTacToe :x::o:
 
 # SINOPSIS GAME
-Seorang player akan bermain tic-tac-toe bersama player lainnya. Dia memiliki kesempatan berfikir dan memilih meletakkan huruf :x: atau :o: untuk memenangkan permainan. Kunci utamanya untuk memenangkan permainan ada di huruf :x: dan :o: dengan cara menempatkan 3 simbol ( :x: / :o:) dalam satu deret.
 
-Player :x: akan memulai permainan terlebih dahulu dan dilanjutkan dengan Player :o:.
+Pada Tugas Besar kali ini kami membuat permainan tic-tac-toe menggunakan java oop. Tic-tac-toe merupakan permainan klasik berjenis permainan papan (board-game) dengan ukuran 3x3. Cara memainkan Permainan tersebut dengan memberikan Nilai X atau O pada tiap kotak papan. Dalam Permainan ini hasil permainan yang didapat berupa menang, kalah, atau seri. 
 
-Jika salah satu player berhasil meletakkan huruf :x: atau huruf :o: secara sejajar dalam satu deret baik itu secara horizontal, vertikal, atau diagonal sebagai contoh : (:x::x::x:), (:o::o::o:) maka player tersebut memenangkan permainan.
+(cara bermainya)
 
-Jika simbol huruf :x: dan :o: tidak sejajar dalam satu deret maka permainan ini akan seri sebagai contoh :
+Seorang player akan bermain tic-tac-toe bersama player lainnya. Dia memiliki kesempatan berfikir dan memilih meletakkan huruf ❌ atau ⭕ untuk memenangkan permainan. Kunci utamanya untuk memenangkan permainan ini ada di huruf ❌ dan ⭕ yang salah satunya misal ⭕ tersusun satu deret sebanyak tiga ⭕ mengisi bagian kotak.
 
+Player ❌ akan memulai permainan terlebih dahulu dan dilanjutkan dengan Player ⭕.
 
-| :x:|:o:|:x: |
+Jika salah satu player berhasil meletakkan huruf ❌ atau huruf ⭕ secara sejajar dalam satu deret baik itu secara horizontal, vertikal, atau diagonal sebagai contoh :
+
+| |:o:|:x: |
 | -- |-- | -- |
-| :o:|:o:|:o: |
-| :x:|:o:|:x: |
+| :o:|:x:|:o: |
+| :x:||:x: |
 
-Saat player :x: atau player :o: memenangkan permainan akan muncul "Pemenangnya : :x: / :o:"
+Maka player tersebutlah pemenang permainan.
 
-Dikarenakan salah satu player sudah memenangkan permainan atau permainan berakhir seri maka permainan akan berakhir :tada::tada:
+Jika simbol huruf ❌ dan ⭕ tidak sejajar dalam satu deret maka permainan ini akan seri sebagai contoh :
+
+| |:o:|:x: |
+| -- |-- | -- |
+| :o:|:x:|:o: |
+| :o:|:o:|:x: |
+
+Saat player ❌ atau player ⭕ memenangkan permainan akan muncul "Pemenangnya : ❌ / ⭕"
+
+Dikarenakan salah satu player sudah memenangkan permainannya, maka permainan pun selesai 🎉🎉
 
 ## Struktur Dasar Dalam Game Tic-tac-toe
 
