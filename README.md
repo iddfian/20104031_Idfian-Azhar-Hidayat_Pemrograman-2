@@ -16,7 +16,7 @@
 
 # SINOPSIS GAME
 
-Tic-tac-toe merupakan permainan klasik berjenis permainan papan (board-game) dengan ukuran 3x3. Cara memainkan Permainan tersebut dengan memberikan Nilai X atau O pada tiap kotak papan. Dalam Permainan ini hasil permainan yang didapat berupa menang, kalah, atau seri. 
+Tic-tac-toe merupakan permainan klasik berjenis permainan papan (board-game) dengan ukuran 3x3. Cara memainkan Permainan tersebut dengan memberikan Nilai ❌ atau  ⭕ pada tiap kotak papan. Dalam Permainan ini hasil permainan yang didapat berupa menang, kalah, atau seri. 
 
 (cara bermainya)
 
