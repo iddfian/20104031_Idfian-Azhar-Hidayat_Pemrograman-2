@@ -16,7 +16,7 @@
 
 # SINOPSIS GAME
 
-Pada Tugas Besar kali ini kami membuat permainan tic-tac-toe menggunakan java oop. Tic-tac-toe merupakan permainan klasik berjenis permainan papan (board-game) dengan ukuran 3x3. Cara memainkan Permainan tersebut dengan memberikan Nilai X atau O pada tiap kotak papan. Dalam Permainan ini hasil permainan yang didapat berupa menang, kalah, atau seri. 
+Tic-tac-toe merupakan permainan klasik berjenis permainan papan (board-game) dengan ukuran 3x3. Cara memainkan Permainan tersebut dengan memberikan Nilai X atau O pada tiap kotak papan. Dalam Permainan ini hasil permainan yang didapat berupa menang, kalah, atau seri. 
 
 (cara bermainya)
 
